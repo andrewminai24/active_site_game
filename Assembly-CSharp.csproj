@@ -63,10 +63,11 @@
   <ItemGroup>
     <Compile Include="Assets\Resources\RandomSpin.cs" />
     <Compile Include="Assets\Scripts\ActiveSiteDisplay.cs" />
-    <Compile Include="Assets\Scripts\Atom.cs" />
     <Compile Include="Assets\Scripts\AtomDetail.cs" />
     <Compile Include="Assets\Scripts\DisplayMolFile.cs" />
     <Compile Include="Assets\Scripts\FileManager.cs" />
+    <Compile Include="Assets\Scripts\Inventory.cs" />
+    <Compile Include="Assets\Scripts\MoleculeSO.cs" />
     <Compile Include="Assets\Scripts\MolFile.cs" />
     <Compile Include="Assets\Scripts\Rotator.cs" />
     <None Include="Assets\Resources\UserPiece\C29H50O2_VitaminE.txt" />
@@ -74,17 +75,17 @@
     <None Include="Assets\Resources\ActiveSite\Anchors\ligand1.txt" />
     <None Include="Assets\Resources\ActiveSite\active-site.txt" />
     <None Include="Assets\Resources\UserPiece\C27H32F2N8_Abemaciclib.txt" />
+    <Reference Include="UnityEditor.StandardEvents">
+      <HintPath>C:/Users/w1624933/Desktop/active_site_game/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro.Editor">
+      <HintPath>C:/Users/w1624933/Desktop/active_site_game/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
       <HintPath>C:/Users/w1624933/Desktop/active_site_game/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>C:/Users/w1624933/Desktop/active_site_game/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/w1624933/Desktop/active_site_game/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>C:/Users/w1624933/Desktop/active_site_game/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

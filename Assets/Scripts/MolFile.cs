@@ -41,7 +41,7 @@ public class MolFile
     /// </summary>
     /// <param name="file">Full file path to the molfile.</param>
     public void ReadFile(string fullFilePath)
-    {
+    { 
         if (File.Exists(fullFilePath))
         {
             _fileString = new StringReader(File.ReadAllText(fullFilePath));
