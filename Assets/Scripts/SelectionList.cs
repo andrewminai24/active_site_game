@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+/*
 public class SelectionList : MonoBehaviour
 {
 	const int RENDER_QUEUE_OVERLAY = 4000;
@@ -15,15 +15,9 @@ public class SelectionList : MonoBehaviour
 	public int curPageNum = 1;
 	public int padding = 10;
 	
-	// Use this for initialization
 	void Start () {
 		LoadMolecules();
 		Display();
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
 	}
 
 	void LoadMolecules()
@@ -91,3 +85,4 @@ public class SelectionList : MonoBehaviour
         gameObject.AddComponent<DragObject>();
     }
 }
+*/

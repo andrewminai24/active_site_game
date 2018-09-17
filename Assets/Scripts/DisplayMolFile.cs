@@ -4,7 +4,7 @@ using UnityEngine;
 
 public static class DisplayAtoms
 {
-    public static void Display(List<MolFile.AtomDetail> atomDetail, Transform parent)
+    public static void Display(List<AtomDetail> atomDetail, Transform parent)
     {
         int count = 0;
         GameObject dispAtom;
@@ -14,16 +14,15 @@ public static class DisplayAtoms
         //rb.AddForce(Random.insideUnitCircle * 3, ForceMode.VelocityChange);
         //rb.useGravity = false;
 
-        foreach (MolFile.AtomDetail atom in atomDetail)
+        foreach (AtomDetail atom in atomDetail)
         {
             dispAtom = GameObject.CreatePrimitive(PrimitiveType.Sphere);
             dispAtom.name = atom.atomSymbol + " " + (++count);
             dispAtom.transform.parent = parent;
 
-            //Rigidbody rb = dispAtom.AddComponent<Rigidbody>();                        // Funny
+            //Rigidbody rb = dispAtom.AddComponent<Rigidbody>();
             //rb.AddForce(Random.insideUnitCircle * 3, ForceMode.VelocityChange);
 
-            dispAtom.AddComponent<ProximityAttach>();
             SphereCollider coll = dispAtom.GetComponent<SphereCollider>();
             coll.isTrigger = true;
             coll.radius *= 2; 
@@ -44,12 +43,8 @@ public static class DisplayAtoms
             centerPoint += dispAtom.transform.localPosition;
             
             if (atom.bond != null)
-            {
                 foreach (int bond in atom.bond)
-                {
                     CreateBond(atom.position, atomDetail[bond].position, parent, 0.25f);
-                }
-            }
         }
 
         if (count > 0)
@@ -59,7 +54,7 @@ public static class DisplayAtoms
         parent.transform.localPosition -= centerPoint;
     }
 
-    private static void CreateBond(Vector3 start, Vector3 end, Transform parent, float thickness = 0.33f)
+    static void CreateBond(Vector3 start, Vector3 end, Transform parent, float thickness = 0.33f)
     {
         GameObject dispBond = GameObject.CreatePrimitive(PrimitiveType.Cylinder);
         GameObject bondHolder = new GameObject();
@@ -86,7 +81,7 @@ public static class DisplayAtoms
         ScriptableObject.Destroy(tempPos);
     }
 
-    private static Color GetAtomColor(string symbol)
+    static Color GetAtomColor(string symbol)
     {
         Color color = Color.magenta;
 

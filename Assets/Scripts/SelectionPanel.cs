@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+/*
 public class SelectionPanel : MonoBehaviour
 {
     enum PanelState { Collapsed, Expanded };
@@ -34,3 +34,4 @@ public class SelectionPanel : MonoBehaviour
         }
     }
 }
+*/
