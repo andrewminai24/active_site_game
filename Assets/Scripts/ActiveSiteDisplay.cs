@@ -11,10 +11,10 @@ public class ActiveSiteDisplay : MonoBehaviour
 
     void DisplayActiveSite()
     {
-        FileManager.MetaFile[] activeSite = FileManager.GetPieces("ActiveSite");
+        FileManager.MetaFile[] activeSite = FileManager.GetPieces("UserPiece");
         // TODO: update for multiple Active Sites
 
-        MolFile molFile = new MolFile(activeSite[0]);
+        MolFile molFile = new MolFile(activeSite[2]);
         // TODO: be able to select other Active Sites (if available)
 
         Transform activeSiteTrans = CreateTransform("ActiveSite", transform);
